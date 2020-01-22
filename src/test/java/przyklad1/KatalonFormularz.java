@@ -6,6 +6,7 @@ import org.junit.*;
 import org.openqa.selenium.support.ui.Select;
 
 import javax.swing.*;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
@@ -34,8 +35,8 @@ public class KatalonFormularz {
         lastName.clear();
         lastName.sendKeys("Kowalski");
 
-        //WebElement gender = driver.findElement(By.name("gender"));
-        //gender.get(0).click();
+        List<WebElement> gender = driver.findElements(By.name("gender"));
+        gender.get(0).click();
 
         WebElement dateOfBirth = driver.findElement(By.id("dob"));
         dateOfBirth.clear();
@@ -66,7 +67,7 @@ public class KatalonFormularz {
         submitButton.click();
 
 
-       
+
     }
 
     @After
