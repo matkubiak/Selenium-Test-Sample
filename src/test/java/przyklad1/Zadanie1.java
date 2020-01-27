@@ -13,29 +13,31 @@ public class Zadanie1 {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
-        driver = new ChromeDriver();
-
-        driver.manage().window().maximize();
-        // Przejdź do wyszukiwarki bing
-        driver.get("http://www.bing.com");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver");
+        driver = new ChromeDriver(); // otwarcie przegladarki google.com
+        driver.manage().window().maximize(); //zmaksymalizowanie okna
     }
-    @Test
-    public void testGoogleSearch() {
-        // Znajdź element wprowadzania tekstu na podstawie jego nazwy
-        WebElement element = driver.findElement(By.name("q"));
-        // Wyczyść teskst zapisany w elemencie
-        element.clear();
 
-        // Wpisz informacje do wyszukania
-        element.sendKeys("Mistrzostwa Świata w piłce nożnej 2018");
+    /*@Test
+    public void TestGetTextFunction() {
+        driver.get("https://pl.wikipedia.org/");
+        WebElement element = driver.findElement(By.id("main-page-column1"));
+        System.out.println(element.getText());
+    }*/
 
-        // Prześlij formularz
-        element.submit();
-    }
+    /*@Test
+    public void TestGetTextAttribute() {
+        driver.get("https://pl.wikipedia.org/");
+        String atrybut = driver.findElement(By.id("main-page-content")).getAttribute("class");
+        System.out.println(atrybut);
+    }*/
+
+
     @After
     public void tearDown() throws Exception {
         // Zamknij przeglądarkę
-        driver.quit();
+        // driver.quit();
     }
+
+
 }
