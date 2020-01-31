@@ -15,14 +15,14 @@ public class GoogleSearch {
 
     @Given("an open browser with google.com")
     public void openGoogleSearch() {
-            // Skonfiguruj sterownik przeglądarki
-            System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
-            // Uruchom nowy egzemplarz przeglądarki Chrome
-            driver = new ChromeDriver();
-            // Zmaksymalizuj okno przeglądarki
-            driver.manage().window().maximize();
-            // Przejdź do Google
-            driver.get("http://www.google.com");
+        // Skonfiguruj sterownik przeglądarki
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
+        // Uruchom nowy egzemplarz przeglądarki Chrome
+        driver = new ChromeDriver();
+        // Zmaksymalizuj okno przeglądarki
+        driver.manage().window().maximize();
+        // Przejdź do Google
+        driver.get("http://www.google.com");
 
     }
 

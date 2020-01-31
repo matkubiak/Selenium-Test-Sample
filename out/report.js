@@ -1,286 +1,83 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("google-text-search.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/Cucumber/Features/BDD.feature");
 formatter.feature({
   "line": 1,
-  "name": "Google search",
+  "name": "Change user information after login",
   "description": "",
-  "id": "google-search",
+  "id": "change-user-information-after-login",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "line": 3,
-  "name": "user can search any keyword",
+  "line": 4,
+  "name": "Change user birthday date, gender and sign up for a newsletter",
   "description": "",
-  "id": "google-search;user-can-search-any-keyword",
+  "id": "change-user-information-after-login;change-user-birthday-date,-gender-and-sign-up-for-a-newsletter",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 6,
-  "name": "an open browser with google.com",
+  "name": "User is logged in to CodersLab shop",
   "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "a keyword selenium is entered in input field",
-  "keyword": "When "
 });
 formatter.step({
   "line": 8,
-  "name": "the first one should contain selenium",
-  "keyword": "Then "
+  "name": "User goes to UserInformationPage",
+  "keyword": "When "
 });
 formatter.step({
-  "line": 9,
-  "name": "close browser",
+  "line": 10,
+  "name": "User signs up for our newsletter",
   "keyword": "And "
 });
-formatter.match({
-  "location": "GoogleSearch.openGoogleSearch()"
-});
-formatter.result({
-  "duration": 12055248200,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "selenium",
-      "offset": 10
-    }
-  ],
-  "location": "GoogleSearch.enterKeyword(String)"
-});
-formatter.result({
-  "duration": 1533712500,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "selenium",
-      "offset": 29
-    }
-  ],
-  "location": "GoogleSearch.theFirstOneShouldContainKeyword(String)"
-});
-formatter.result({
-  "duration": 241400,
-  "status": "passed"
-});
-formatter.match({
-  "location": "GoogleSearch.closeBrowser()"
-});
-formatter.result({
-  "duration": 782972500,
-  "status": "passed"
-});
-formatter.scenarioOutline({
+formatter.step({
   "line": 12,
-  "name": "",
-  "description": "",
-  "id": "google-search;",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 13,
-  "name": "an open browser with google.com",
-  "keyword": "Given "
+  "name": "User saves information",
+  "keyword": "And "
 });
 formatter.step({
   "line": 14,
-  "name": "a keyword \u003ckeyword\u003e is entered in input field",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 15,
-  "name": "the first one should contain \u003cexpectedWord\u003e",
+  "name": "User sees \"Information successfully updated.\"",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 16,
-  "name": "close browser",
-  "keyword": "And "
-});
-formatter.examples({
-  "line": 18,
-  "name": "",
-  "description": "",
-  "id": "google-search;;",
-  "rows": [
-    {
-      "cells": [
-        "keyword",
-        "expectedWord"
-      ],
-      "line": 19,
-      "id": "google-search;;;1"
-    },
-    {
-      "cells": [
-        "Karol",
-        "Karol"
-      ],
-      "line": 20,
-      "id": "google-search;;;2"
-    },
-    {
-      "cells": [
-        "Jacek",
-        "Jacek"
-      ],
-      "line": 21,
-      "id": "google-search;;;3"
-    }
-  ],
-  "keyword": "Examples"
-});
-formatter.scenario({
-  "line": 20,
-  "name": "",
-  "description": "",
-  "id": "google-search;;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 13,
-  "name": "an open browser with google.com",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 14,
-  "name": "a keyword Karol is entered in input field",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 15,
-  "name": "the first one should contain Karol",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 16,
-  "name": "close browser",
-  "keyword": "And "
-});
 formatter.match({
-  "location": "GoogleSearch.openGoogleSearch()"
+  "location": "ChangeUserInfoSteps.userIsLooggedInToCodersLabShop()"
 });
 formatter.result({
-  "duration": 10633372400,
+  "duration": 15501588900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ChangeUserInfoSteps.userGoesToUserInformationPage()"
+});
+formatter.result({
+  "duration": 979604800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ChangeUserInfoSteps.userSignsUpForOurNewsletter()"
+});
+formatter.result({
+  "duration": 33868700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ChangeUserInfoSteps.userSavesInformation()"
+});
+formatter.result({
+  "duration": 1104912200,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Karol",
-      "offset": 10
+      "val": "Information successfully updated.",
+      "offset": 11
     }
   ],
-  "location": "GoogleSearch.enterKeyword(String)"
+  "location": "ChangeUserInfoSteps.userSees(String)"
 });
 formatter.result({
-  "duration": 1971825400,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Karol",
-      "offset": 29
-    }
-  ],
-  "location": "GoogleSearch.theFirstOneShouldContainKeyword(String)"
-});
-formatter.result({
-  "duration": 82100,
-  "status": "passed"
-});
-formatter.match({
-  "location": "GoogleSearch.closeBrowser()"
-});
-formatter.result({
-  "duration": 1009072500,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 21,
-  "name": "",
-  "description": "",
-  "id": "google-search;;;3",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 13,
-  "name": "an open browser with google.com",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 14,
-  "name": "a keyword Jacek is entered in input field",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 15,
-  "name": "the first one should contain Jacek",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 16,
-  "name": "close browser",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "GoogleSearch.openGoogleSearch()"
-});
-formatter.result({
-  "duration": 10527451500,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Jacek",
-      "offset": 10
-    }
-  ],
-  "location": "GoogleSearch.enterKeyword(String)"
-});
-formatter.result({
-  "duration": 1653187300,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Jacek",
-      "offset": 29
-    }
-  ],
-  "location": "GoogleSearch.theFirstOneShouldContainKeyword(String)"
-});
-formatter.result({
-  "duration": 173800,
-  "status": "passed"
-});
-formatter.match({
-  "location": "GoogleSearch.closeBrowser()"
-});
-formatter.result({
-  "duration": 716724100,
+  "duration": 703123900,
   "status": "passed"
 });
 });
